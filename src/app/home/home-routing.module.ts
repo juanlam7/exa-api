@@ -2,22 +2,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
-/* import { HomeGuard } from '../guards/home.guard'; */
+import { HomeGuard } from '../guards/home.guard';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    /* canActivate: [HomeGuard], */
+    canActivate: [HomeGuard],
     children: [
-      /* {
-        path: 'map',
-        loadChildren: () =>
-        import('../pages/map/map.module').then(
-          m => m.MapPageModule
-        )
-      },
       {
+        path: 'welcome',
+        loadChildren: () =>
+        import('../pages/welcome/welcome.module').then(
+          m => m.WelcomeComponentModule
+        )
+      }
+      /* {
         path: 'menu',
         loadChildren: () => 
         import('../pages/menu/menu.module').then(
