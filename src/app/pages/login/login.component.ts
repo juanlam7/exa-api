@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  signupForm: FormGroup;
 
-  ngOnInit(): void {
+  constructor(private fb: FormBuilder, private router: Router) {}
+
+  ngOnInit() {
+    localStorage.clear();
+    const password = new FormControl('', Validators.required)
+
+    this.signupForm = this.fb.group(
+        {
+          userName: ['', [Validators.required]],
+          password: password
+        }
+    );
+  }
+  onSubmit () {
+    if (!this.signupForm.invalid) {
+      const user = this.signupForm.get('userName').value;
+      const pass = this.signupForm.get('password').value;
+      if (user === 'redflip' && pass === 'RF2020$') {
+        const sessionState = {
+          isUserLoggedIn: true
+        };
+        localStorage.setItem('currentUser', JSON.stringify(sessionState))
+        this.router.navigate(['/']);
+      } else if (user === 'inhaus' && pass === 'IH2020$') {
+        const sessionState = {
+          isUserLoggedIn: true
+        };
+        localStorage.setItem('currentUser', JSON.stringify(sessionState))
+        this.router.navigate(['/']);
+      } else if (user === 'tatiana' && pass === 'CB2020$') {
+        const sessionState = {
+          isUserLoggedIn: true
+        };
+        localStorage.setItem('currentUser', JSON.stringify(sessionState))
+        this.router.navigate(['/']);
+      } else if (user === 'ricardo' && pass === 'AV2020$') {
+        const sessionState = {
+          isUserLoggedIn: true
+        };
+        localStorage.setItem('currentUser', JSON.stringify(sessionState))
+        this.router.navigate(['/']);
+      } else {
+        alert('Credenciales incorrectas');
+      }
+    }
   }
 
 }
