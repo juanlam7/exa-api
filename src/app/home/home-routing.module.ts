@@ -11,10 +11,10 @@ const routes: Routes = [
     canActivate: [HomeGuard],
     children: [
       {
-        path: 'welcome',
+        path: 'lobby',
         loadChildren: () =>
-        import('../pages/welcome/welcome.module').then(
-          m => m.WelcomeComponentModule
+        import('../pages/lobby/lobby.module').then(
+          m => m.LobbyComponentModule
         )
       }
       /* {
