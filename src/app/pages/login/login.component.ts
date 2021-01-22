@@ -28,13 +28,15 @@ export class LoginComponent implements OnInit {
     if (!this.signupForm.invalid) {
       const user = this.signupForm.get('userName').value;
       const pass = this.signupForm.get('password').value;
-      if (user === 'redflip' && pass === 'RF2020$') {
+      if (user === 'admin' && pass === 'admin') {
         const sessionState = {
           isUserLoggedIn: true
         };
+        console.log('BIEN')
         localStorage.setItem('currentUser', JSON.stringify(sessionState))
-        this.router.navigate(['/']);
-      } else if (user === 'inhaus' && pass === 'IH2020$') {
+        this.router.navigate(['/home/lobby']);
+      } 
+      /* else if (user === 'inhaus' && pass === 'IH2020$') {
         const sessionState = {
           isUserLoggedIn: true
         };
@@ -52,7 +54,8 @@ export class LoginComponent implements OnInit {
         };
         localStorage.setItem('currentUser', JSON.stringify(sessionState))
         this.router.navigate(['/']);
-      } else {
+      }  */
+      else {
         alert('Credenciales incorrectas');
       }
     }

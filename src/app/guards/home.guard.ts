@@ -10,7 +10,7 @@ export class HomeGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    const user =  JSON.parse(localStorage.getItem('token'));
+    const user =  JSON.parse(localStorage.getItem('currentUser'));
     if (user != null) {
       return true
     }
