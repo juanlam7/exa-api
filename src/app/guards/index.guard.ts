@@ -10,10 +10,10 @@ export class IndexGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    const user =  JSON.parse(localStorage.getItem('token'));
+    const user =  JSON.parse(localStorage.getItem('currentUser'));
 
     if (user != null) {
-      this.router.navigate(['home/welcome']);
+      this.router.navigate(['home/lobby']);
       return false
     }
     return true;
