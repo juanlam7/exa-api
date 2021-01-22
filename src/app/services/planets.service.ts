@@ -11,7 +11,7 @@ export class PlanetsService {
 
   getAllPlanets(): Observable<any> {
     console.log('Get all planets')
-    const endpoint = `https://swapi.dev/api/planets`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/planets`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })
@@ -20,7 +20,7 @@ export class PlanetsService {
 
   getPlanetsById(id): Observable<any> {
     console.log('Get planets by id')
-    const endpoint = `https://swapi.dev/api/planets/${id}`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/planets/${id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })

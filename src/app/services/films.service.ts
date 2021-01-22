@@ -11,7 +11,7 @@ export class FilmsService {
 
   getAllFilms(): Observable<any> {
     console.log('Get all films')
-    const endpoint = `https://swapi.dev/api/films`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/films`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })
@@ -20,7 +20,7 @@ export class FilmsService {
 
   getFilmsById(id): Observable<any> {
     console.log('Get films by id')
-    const endpoint = `https://swapi.dev/api/films/${id}`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/films/${id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })

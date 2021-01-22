@@ -10,6 +10,7 @@ import {
   PerfectScrollbarConfigInterface
 } from 'ngx-perfect-scrollbar';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -23,6 +24,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     PerfectScrollbarModule,
     BrowserAnimationsModule,
     NgxDatatableModule

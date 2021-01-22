@@ -11,7 +11,7 @@ export class SpeciesService {
 
   getAllSpecies(): Observable<any> {
     console.log('Get all Species')
-    const endpoint = `https://swapi.dev/api/species`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/species`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })
@@ -20,7 +20,7 @@ export class SpeciesService {
 
   getSpeciesById(id): Observable<any> {
     console.log('Get Species by id')
-    const endpoint = `https://swapi.dev/api/species/${id}`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/species/${id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })

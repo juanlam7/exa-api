@@ -11,7 +11,7 @@ export class VehiclesService {
 
   getAllVehicles(): Observable<any> {
     console.log('Get all Vehicles')
-    const endpoint = `https://swapi.dev/api/vehicles`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/vehicles`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })
@@ -20,7 +20,7 @@ export class VehiclesService {
 
   getVehiclesById(id): Observable<any> {
     console.log('Get Vehicles by id')
-    const endpoint = `https://swapi.dev/api/vehicles/${id}`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/vehicles/${id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })

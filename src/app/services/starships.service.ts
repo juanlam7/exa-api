@@ -11,7 +11,7 @@ export class StarshipsService {
 
   getAllStarships(): Observable<any> {
     console.log('Get all Starships')
-    const endpoint = `https://swapi.dev/api/starships`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/starships`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })
@@ -20,7 +20,7 @@ export class StarshipsService {
 
   getStarshipsById(id): Observable<any> {
     console.log('Get Starships by id')
-    const endpoint = `https://swapi.dev/api/starships/${id}`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/starships/${id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })

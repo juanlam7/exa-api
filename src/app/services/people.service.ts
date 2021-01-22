@@ -11,7 +11,7 @@ export class PeopleService {
 
   getAllPeople(): Observable<any> {
     console.log('Get all people')
-    const endpoint = `https://swapi.dev/api/people`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/people`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })
@@ -20,7 +20,7 @@ export class PeopleService {
 
   getPeopleById(id): Observable<any> {
     console.log('Get people by id')
-    const endpoint = `https://swapi.dev/api/people/${id}`;
+    const endpoint = `https://cors-anywhere.herokuapp.com/http://swapi.dev/api/people/${id}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     })
