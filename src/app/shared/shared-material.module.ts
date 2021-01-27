@@ -40,6 +40,7 @@ import { MatListModule} from "@angular/material/list";
 import { MatTabsModule} from "@angular/material/tabs";
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
   exports: [
@@ -79,7 +80,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatBadgeModule,
     MatBottomSheetModule,
     MatDividerModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxDatatableModule
   ]
 })
 export class SharedMaterialModule {}

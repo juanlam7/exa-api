@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import { PeopleService } from './../../services/people.service';
 
 @Component({
   selector: 'app-lobby',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LobbyComponent implements OnInit {
 
-  constructor() { }
+  public items: any[];
+
+  constructor(private router: Router,
+              private peopleService: PeopleService,) {}
 
   ngOnInit(): void {
+    this.peopleService.getAllPeople().subscribe((resp) => {
+      console.log('Petición exitosa!')
+      console.log(resp)
+        this.items = resp.results;
+    })
   }
 
 }

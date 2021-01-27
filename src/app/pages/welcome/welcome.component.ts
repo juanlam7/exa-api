@@ -13,10 +13,10 @@ export class WelcomeComponent implements OnInit {
               private peopleService: PeopleService,) {}
 
   ngOnInit(): void {
-    this.peopleService.getAllPeople().subscribe((resp) => {
+    /* this.peopleService.getAllPeople().subscribe((resp) => {
       console.log('Petición exitosa')
       console.log(resp)
-    })
+    }) */
   }
 
   goLogin() {
