@@ -1,0 +1,31 @@
+.ngx-datatable {
+    border: 1px solid #000000;
+}
+.external_div{
+    width: 98%;
+}
+@media only screen and (max-width: 1320px) {
+    .ngx-datatable {
+        p{font-size: 10px;}
+    }
+    :host
+      ::ng-deep
+      .ngx-datatable.material .datatable-header {
+        height: 15px !important;
+        .datatable-header-cell {
+          font-size: 10px;
+        }}
+    :host
+      ::ng-deep
+      .ngx-datatable.material .datatable-footer .datatable-footer-inner {
+          font-size: 10px;
+          height: 15px !important;;
+        }
+    :host
+    ::ng-deep
+        .ngx-datatable.material .datatable-body .datatable-scroll .datatable-row-wrapper{
+            datatable-body-row{
+                height: 15px !important;
+            }
+        }
+}
