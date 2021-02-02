@@ -1,8 +1,16 @@
+mat-grid-list{
+    /* background: rgb(134, 134, 134); */
+    background-image: url("https://thegeekiary.com/wp-content/uploads/2020/10/C0BF1C23-54E1-4174-A060-3E59209E715C.jpeg");
+}
+
 .ngx-datatable {
     border: 1px solid #000000;
 }
 .external_div{
     width: 98%;
+    mat-card{
+        background: rgb(194, 194, 194);
+    }
 }
 .spinnerCl{
     width: 98%;
