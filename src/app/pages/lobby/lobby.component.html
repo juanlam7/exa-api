@@ -5,7 +5,7 @@
         <span fxFlex></span>
         <button mat-raised-button class="mb-05" color="primary">AAAAAAAAAA</button>
     </div> -->
-    <div class="p-0 external_div">
+    <div class="p-0 external_div" *ngIf="items.length > 0">
       <mat-card class="p-3">
         <mat-card-content class="p-3">
           <ngx-datatable
@@ -52,6 +52,9 @@
         </mat-card-content>
       </mat-card>
     </div>
+    <div class="p-0 spinnerCl" *ngIf="items.length === 0">
+      <mat-spinner strokeWidth="10"></mat-spinner>
+    </div>
   </mat-grid-tile>
   <!-- ************************************ -->
   <mat-grid-tile>
@@ -59,7 +62,7 @@
         <span fxFlex></span>
         <button mat-raised-button class="mb-05" color="primary">AAAAAAAAAA</button>
     </div> -->
-    <div class="p-0 external_div">
+    <div class="p-0 external_div" *ngIf="items.length > 0">
       <mat-card class="p-3">
         <mat-card-content class="p-3">
           <ngx-datatable
@@ -106,6 +109,9 @@
         </mat-card-content>
       </mat-card>
     </div>
+    <div class="p-0 spinnerCl" *ngIf="items.length === 0">
+      <mat-spinner strokeWidth="15"></mat-spinner>
+    </div>
   </mat-grid-tile>
   <!-- ************************************ -->
   <mat-grid-tile>
@@ -113,7 +119,7 @@
         <span fxFlex></span>
         <button mat-raised-button class="mb-05" color="primary">AAAAAAAAAA</button>
     </div> -->
-    <div class="p-0 external_div">
+    <div class="p-0 external_div" *ngIf="items.length > 0">
       <mat-card class="p-3">
         <mat-card-content class="p-3">
           <ngx-datatable
@@ -160,6 +166,9 @@
         </mat-card-content>
       </mat-card>
     </div>
+    <div class="p-0 spinnerCl" *ngIf="items.length === 0">
+      <mat-spinner strokeWidth="20"></mat-spinner>
+    </div>
   </mat-grid-tile>
   <!-- ************************************ -->
   <mat-grid-tile>
@@ -167,7 +176,7 @@
         <span fxFlex></span>
         <button mat-raised-button class="mb-05" color="primary">AAAAAAAAAA</button>
     </div> -->
-    <div class="p-0 external_div">
+    <div class="p-0 external_div" *ngIf="items.length > 0">
       <mat-card class="p-3">
         <mat-card-content class="p-3">
           <ngx-datatable
@@ -213,6 +222,9 @@
               </ngx-datatable>
         </mat-card-content>
       </mat-card>
+    </div>
+    <div class="p-0 spinnerCl" *ngIf="items.length === 0">
+      <mat-spinner strokeWidth="25"></mat-spinner>
     </div>
   </mat-grid-tile>
 </mat-grid-list>

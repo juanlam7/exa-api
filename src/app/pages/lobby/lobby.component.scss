@@ -4,6 +4,12 @@
 .external_div{
     width: 98%;
 }
+.spinnerCl{
+    width: 98%;
+    mat-spinner{
+        margin:0 auto;
+    }
+}
 @media only screen and (max-width: 1320px) {
     .ngx-datatable {
         p{font-size: 10px;}
